@@ -1,0 +1,120 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #222;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 30px;
+  background-color: #fff;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-img {
+  max-width: 400px;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Features Section */
+.features {
+  padding: 50px 30px;
+  background-color: #e9ecef;
+  text-align: center;
+}
+
+.feature-columns {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.column img {
+  width: 100px;
+  height: 100px;
+}
+
+.column h3 {
+  margin: 10px 0;
+}
+
+/* About Section */
+.about {
+  padding: 50px 30px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Buy Section */
+.buy {
+  padding: 50px 30px;
+  background-color: #d4edda;
+  text-align: center;
+}
+
+.buy-btn {
+  background-color: #28a745;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
