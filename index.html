@@ -6,6 +6,48 @@
   <title>Product Landing Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <!-- Modal Form -->
+<div id="buyForm" class="modal">
+  <div class="modal-content">
+    <h3>Enter Your Details</h3>
+    <form onsubmit="submitForm(event)">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="address">Address:</label><br>
+      <textarea id="address" name="address" rows="3" required></textarea><br><br>
+
+      <label for="pincode">Pincode:</label><br>
+      <input type="text" id="pincode" name="pincode" pattern="\d{6}" title="Enter 6-digit pincode" required><br><br>
+
+      <button type="submit" class="btn">Submit</button>
+      <button type="button" class="btn" onclick="closeForm()">Cancel</button>
+    </form>
+  </div>
+</div>
+<div id="overlay" class="overlay" onclick="closeForm()"></div>
+
+<script>
+  function openForm() {
+    document.getElementById("buyForm").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("buyForm").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  }
+
+  function submitForm(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const address = document.getElementById("address").value;
+    const pincode = document.getElementById("pincode").value;
+    alert(`Thank you, ${name}! Your order will be delivered to:\n${address}\nPincode: ${pincode}`);
+    closeForm();
+  }
+</script>
+
 <body>
 
   <!-- Header Section -->
@@ -63,10 +105,11 @@
 
   <!-- Buy Section -->
   <section class="buy" id="buy">
-    <h2>Get Yours Now!</h2>
-    <p>Limited stock available. Order today and experience innovation!</p>
-    <a href="#" class="btn buy-btn">Buy Now</a>
-  </section>
+  <h2>Get Yours Now!</h2>
+  <p>Limited stock available. Order today and experience innovation!</p>
+  <button class="btn buy-btn" onclick="openForm()">Buy Now</button>
+</section>
+
 
   <!-- Footer -->
   <footer>
